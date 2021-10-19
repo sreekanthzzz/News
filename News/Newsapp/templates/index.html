@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:white;">
+<form action="/Newsapp/Newspost/" method=post>
+	{% csrf_token %}
+
+	<label >Enter the number of pages:</label>
+	<input type="text" name="size" >
+<br>
+
+	<input type="submit" value="yes">
+</form>
+
+<hr>
+	 {% for  k in l %}
+
+	{% if k.title %}
+    <ul class="messagelist">{{k.title}}<br></ul>
+	{% endif %}
+	{% if k.link %}
+    <ul class="messagelist"><a href="{{k.link}}">{{k.link}}</a><br></ul>
+
+	{% endif %}
+{% if k.points %}
+    <ul class="messagelist">{{k.points}}<br><hr></ul>
+
+	{% endif %}
+	{% endfor %}
+<form action="/Newsapp/Newspost/" method=post>
+	{% csrf_token %}
+
+
+
+	<input  type="submit" value="Next">
+</form>
+
+</body>
+</html>
