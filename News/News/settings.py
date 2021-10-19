@@ -25,7 +25,7 @@ SECRET_KEY = '@&3cq2guep&_)4q30kx85#(udz!y8wyxt#r$ato160*mq1vr$z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1',"newfinder.herokuapp.com"]
 
 
 # Application definition
